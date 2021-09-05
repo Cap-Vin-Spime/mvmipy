@@ -2,32 +2,31 @@
 #TO LINEAR SEARCH AN ELEMENT IN A LIST AND DISPLAY THE FREQUENCY AND LOCATION
 def fun(l,x):
     count=0
-	for i in range(0,len(l)):
-    	if l[i]==x:
-        	print("Found location :",i)
+    for i in range(0,len(l)):
+        if l[i]==x:
+            print("Found location :",i)
             count+=1
-			print("Frequency of element :",count)
+    print("Frequency of element :",count)
 a=eval(input("Enter a list :"))
 b=eval(input("Element to be searched :"))
 fun(a,b)
 
 
 #2
-#2
 #TO BINARY SEARCH AN ELEMENT IN A LIST AND DISPLAY THE FREQUENCY AND LOCATION
 def fun(l,a):
-	count=0
+    count=0
     low=0
     high=len(l)-1
     while low<=high:
     	mid=int((low+high)/2)
         if a==l[mid]:
-        	count+=1
+            count+=1
             return("Element found!,index :",mid,"Frequency :",count)
         elif a<l[mid]:
-        	high=mid-1
+            high=mid-1
         else:
-        	low=mid+1
+            low=mid+1
 x=eval(input("Enter a list :"))
 y=eval(input("Enter the element to search :"))
 print(fun(x,y))
