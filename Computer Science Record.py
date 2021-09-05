@@ -51,28 +51,28 @@ f(a)
 #4
 #TO INPUT N NUMBERS IN TUPLE & COUNT HOW MANY EVEN & ODD NUMBERS ARE ENTERED
 def fun(l):
-	e=0
+    e=0
     o=0
     for i in range(0,len(l)):
-    	if l[i]%2==0:
-        	e+=1
+        if l[i]%2==0:
+            e+=1
         else:
-        	o+=1
-        print("Number of even numbers :",e,"Number of odd numbers :",o)
-x=eval(input("Enter a tuple :"))
+            o+=1
+    print("Number of even numbers :",e,"Number of odd numbers :",o)
+x=eval(input("Enter a tuple"))
 fun(x)
 
 
 #5
 #TO UPDATE THE KEY AND VALUE OF EXISTING DICT ENTERED BY USER
 def fun(d,k):
-	value2=eval(input("Enter the value :"))
+    value2=eval(input("Enter the value :"))
     d[k]=value2
     print("Updated dictionary :",d)
 x=int(input("Number of pairs in dictionary :"))
 dic={}
 for i in range(x):
-	key=eval(input("Enter the key :"))
+    key=eval(input("Enter the key :"))
     value=eval(input("Enter the value :"))
     dic[key]=value
 print("Original dictionary :",dic)
@@ -83,19 +83,19 @@ fun(dic,a)
 #6
 #TO COUNT HOW MANY VOWELS PRESENT IN THE STRING
 def fun(l):
-	count=0
+    count=0
     for i in range(0,len(l)):
     	if l[i]=="a" or l[i]=="A" :
-        	count+=1
+    	    count+=1
         if l[i]=="e" or l[i]=="E" :
-        	count+=1
+            count+=1
         if l[i]=="i" or l[i]=="I" :
             count+=1
         if l[i]=="o" or l[i]=="O" :
             count+=1
         if l[i]=="u" or l[i]=="U" :
             count+=1
- print("Number of vowels :",count)
+    print("Number of vowels :",count)
 a=eval(input("Enter a string :"))
 fun(a)
 
@@ -103,7 +103,7 @@ fun(a)
 #7
 #TO GENERATE RANDOM NUMBERS BETWEEN 1 AND 6 USING USER DEFINED FUNCTION
 def fun():
-	import random
+    import random
     r=random.randint(1,6)
     print("Random number generated between 1 to 6 :",r)
 fun()
