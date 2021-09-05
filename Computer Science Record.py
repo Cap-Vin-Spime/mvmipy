@@ -169,3 +169,30 @@ while True:
         else:
             print("\nDeleted Item was :",val)
                                 
+
+#9
+#TO IMPLEMENT PYTHON STRING FUNCTIONS
+c=str(input("Enter sentence :"))
+a=input("enter the spacing :")
+print("The string entered is a word :",c.isalpha())
+print("The string entered in lower case :",c.lower())
+print("The string entered is in lower case :",c.islower())
+print("The string entered in lower case :",c.upper())
+print("The string entered is in lower case :",c.isupper())
+print("The string entered after removing the space from left side :",c.lstrip())
+print("The string entered after removing the space from right side :",c.rstrip())
+print("The string entered contains whitespace :",c.isspace())
+print("The string entered is titlecased :",c.istitle())
+print("The string entered after joining with ",a,":",a.join(c))
+print("The string entered after swaping case :",c.swapcase())
+
+
+#10
+#TO READ AND DISPLAY FILE CONTENT LINE BY LINE WITH EACH WORD SEPARATED BY #
+a=open(r"C:\Users\Jammy\Documents\Abhishek\Python\TEXT.txt,","r")
+lines=a.readlines()
+for line in lines:
+    x=line.split()
+    for y in x:
+        print(y+"#",end="")
+    print("")
