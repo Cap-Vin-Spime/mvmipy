@@ -137,36 +137,36 @@ def Peek(Q):
     else:
     	front=0
         return Q[front]
-	def Show(Q):
-                if isEmpty(Q):
-                        print("Sorry No items in Queue ")
-                else:
-                        t = len(Q)-1
-                        print("(Front)",end='')
-                        front = 0
-                        i=front
-                        rear = len(Q)-1
-                        while(i<=rear):
-                                print(Q[i],"==>",end='')
-                                i+=1
-                        print()
-                Q=[ ] #Queue
-                front=rear=None
-                while True:
-                        print("**** QUEUE DEMONSTRATION ******")
-                        print("1. ENQUEUE ")
-                        print("2. DEQUEUE")
-                        print("3. PEEK")
-                        print("4. SHOW QUEUE ")
-                        print("0. EXIT")
-                        ch = int(input("Enter your choice :"))
-                        if ch==1:
-                              val = int(input("Enter Item to Insert :"))
-                              Enqueue(Q,val)
-                        elif ch==2:
-                              val = Dequeue(Q)
-                              if val=="Underflow":
-                                      print("Queue is Empty")
-                              else:
-                                     print("\nDeleted Item was :",val)
+def Show(Q):
+   	if isEmpty(Q):
+       	print("Sorry No items in Queue ")
+    else:
+        t = len(Q)-1
+        print("(Front)",end='')
+        front = 0
+        i=front
+        rear = len(Q)-1
+        while(i<=rear):
+	   	    print(Q[i],"==>",end='')
+            i+=1
+        print()
+Q=[ ] #Queue
+front=rear=None
+while True:
+	print("**** QUEUE DEMONSTRATION ******")
+    print("1. ENQUEUE ")
+    print("2. DEQUEUE")
+    print("3. PEEK")
+    print("4. SHOW QUEUE ")
+    print("0. EXIT")
+    ch = int(input("Enter your choice :"))
+    if ch==1:
+    	val = int(input("Enter Item to Insert :"))
+        Enqueue(Q,val)
+    elif ch==2:
+        val = Dequeue(Q)
+        if val=="Underflow":
+    	    print("Queue is Empty")
+        else:
+            print("\nDeleted Item was :",val)
                                 
