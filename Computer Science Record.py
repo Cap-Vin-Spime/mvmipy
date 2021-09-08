@@ -112,33 +112,33 @@ fun()
 #8
 def isEmpty(Q):
     if len(Q)==0:
-    	return True
+        return True
     else:
         return False
-
+ 
 def Enqueue(Q,item):
     Q.append(item)
     if len(Q)==1:
-    	front=rear=0
+        front=rear=0
     else:
-    	rear=len(Q)
+        rear=len(Q)
 def Dequeue(Q):
     if isEmpty(Q):
-    	return "Underflow"
+        return "Underflow"
     else:
-    	val = Q.pop(0)
+        val = Q.pop(0)
     if len(Q)==0:
-    	front=rear=None
-        return val
+        front=rear=None
+    return val
 def Peek(Q):
     if isEmpty(Q):
-    	return "Underflow"
+        return "Underflow"
     else:
-    	front=0
+        front=0
         return Q[front]
 def Show(Q):
     if isEmpty(Q):
-       	print("Sorry No items in Queue ")
+        print("Sorry No items in Queue ")
     else:
         t = len(Q)-1
         print("(Front)",end='')
@@ -146,7 +146,7 @@ def Show(Q):
         i=front
         rear = len(Q)-1
         while(i<=rear):
-	    print(Q[i],"==>",end='')
+            print(Q[i],"==>",end='')
             i+=1
         print()
 Q=[ ] #Queue
@@ -160,14 +160,25 @@ while True:
     print("0. EXIT")
     ch = int(input("Enter your choice :"))
     if ch==1:
-    	val = int(input("Enter Item to Insert :"))
+        val = int(input("Enter Item to Insert :"))
         Enqueue(Q,val)
     elif ch==2:
         val = Dequeue(Q)
         if val=="Underflow":
-    	    print("Queue is Empty")
+            print("Queue is Empty")
         else:
             print("\nDeleted Item was :",val)
+    elif ch==3:
+        val = Peek(Q)
+        if val=="Underflow":
+            print("Queue Empty")
+        else:
+            print("Front Item:",val)
+    elif ch==4:
+        Show(Q)
+    elif ch==0:
+        print("Bye")
+        break
                                 
 
 #9
